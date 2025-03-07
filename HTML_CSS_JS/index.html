@@ -2,18 +2,50 @@
 
 <html>
     <head>
-        <title>BinhTanPharmaWebsite</title>
+        <title>Thi Restaurant</title>
         <meta charset="utf-8" />
-        <meta name="Website" content="BinhTanPharmaWebsite" />
+        <meta name="Website" content="Thi Restaurant" />
         <meta name="Author" content="Tran Thien Tan" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
         <link rel="stylesheet" href="styles.css" />
+        <meta name="keyword" content="Thi Restaurant, Restaurant, Thi dinning, dinning restaurant" />
     </head>
     <body>
-        <h1>Welcome to BinhTanPharmaWebsite</h1>
+        <h1>WELCOME TO THI RESTAURANT</h1>
         <hr/>
-        <h2>menu</h2>
-        <h2>product</h2>
+        <img src="assets/pic1.JPG" alt="Table Map" width="10" height="10" >
+        <h2>TABLE ORDER</h2>
+            <table border="2" id="table_order">
+                <tr> <!--hang ghe 1-->
+                    <td>Table No.01</td> <!--ban so 1-->
+                    <td>Table No.02</td>
+                </tr>
+                <tr> <!--hang ghe 2-->
+                    <td>Table No.03</td>
+                    <td>Table No.04</td>
+                </tr>
+            </table>
+        <script>
+            function bigImage(event) {
+                event.target.style.height="80px";
+                event.target.style.width="80px";
+            }
+            function norImage(event) {
+                event.target.style.height="40px";
+                event.target.style.width="40px";
+            }
+            window.onload = function(){ /// function chi chay sau khi load 
+                let images = document.querySelectorAll("img"); /// lay tat ca anh trong trang
+
+                images.forEach (img => 
+                {    
+                    img.addEventListener("mouseover",bigImage);
+                    img.addEventListener("mouseout",norImage);
+                })
+            };
+        </script>
+        <h2>CONTACT US</h2>
+        <hr/>
         
     </body>
 </html>
