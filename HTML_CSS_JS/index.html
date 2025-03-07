@@ -13,39 +13,38 @@
     <body>
         <h1>WELCOME TO THI RESTAURANT</h1>
         <hr/>
-        <img src="assets/pic1.JPG" alt="Table Map" width="10" height="10" >
-        <h2>TABLE ORDER</h2>
-            <table border="2" id="table_order">
-                <tr> <!--hang ghe 1-->
-                    <td>Table No.01</td> <!--ban so 1-->
-                    <td>Table No.02</td>
-                </tr>
-                <tr> <!--hang ghe 2-->
-                    <td>Table No.03</td>
-                    <td>Table No.04</td>
-                </tr>
-            </table>
-        <script>
-            function bigImage(event) {
-                event.target.style.height="80px";
-                event.target.style.width="80px";
-            }
-            function norImage(event) {
-                event.target.style.height="40px";
-                event.target.style.width="40px";
-            }
-            window.onload = function(){ /// function chi chay sau khi load 
-                let images = document.querySelectorAll("img"); /// lay tat ca anh trong trang
-
-                images.forEach (img => 
-                {    
-                    img.addEventListener("mouseover",bigImage);
-                    img.addEventListener("mouseout",norImage);
-                })
-            };
-        </script>
+        <img src="assets/pic1.JPG" usemap= "#Table Map" alt="Table Map">
+        <map name="Table Map">
+            <area target="" alt="" title="" href="" coords="51,543,139,654" shape="rect">
+    <area target="" alt="" title="" href="" coords="2,428,74,542" shape="rect">
+    <area target="" alt="" title="" href="" coords="283,499,388,543" shape="rect">
+    <area target="" alt="" title="" href="" coords="35,217,76,318" shape="rect">
+    <area target="" alt="" title="" href="" coords="130,218,234,260" shape="rect">
+    <area target="" alt="" title="" href="" coords="131,377,234,419" shape="rect">
+    <area target="" alt="" title="" href="" coords="36,325,77,421" shape="rect">
+    <area target="" alt="" title="" href="" coords="430,15,478,114" shape="rect">
+    <area target="" alt="" title="" href="" coords="597,16,648,112" shape="rect">
+    <area target="" alt="" title="" href="" coords="574,155,673,190" shape="rect">
+    <area target="" alt="" title="" href="" coords="574,241,671,273" shape="rect">
+    <area target="" alt="" title="" href="" coords="575,319,672,355" shape="rect">
+    <area target="" alt="" title="" href="" coords="317,327,355,419" shape="rect">
+    <area target="" alt="" title="" href="" coords="319,222,353,319" shape="rect">
+        </map>
+        <h1>Lịch Nhà Hàng</h1>
+    <p id="currentDate"></p> <!-- Hiển thị ngày hôm nay -->
+    <table border="1">
+        <thead>
+            <tr id="weekdays">
+                <!-- Cột của các thứ trong tuần sẽ được chèn bằng JavaScript -->
+            </tr>
+        </thead>
+        <tbody id="calendarBody">
+            <!-- Các ngày sẽ được chèn vào đây -->
+        </tbody>
+    </table>
         <h2>CONTACT US</h2>
         <hr/>
-        
+    <script src="script.js">
+    </script>
     </body>
 </html>
